@@ -1,14 +1,22 @@
 // navbar section 
 let collapseButton=document.querySelector(".collapse-button");
 let collapseMenu=document.querySelectorAll(".navbar .collapse")
-console.log(collapseMenu);
+// console.log(collapseMenu);
 collapseButton.addEventListener("click",()=>{
     collapseMenu.forEach((menu)=>{
       menu.classList.toggle("showmenu");
     })
 })
 
-
+// nav-link 
+let navLinks=document.querySelectorAll(".nav-link");
+navLinks.forEach((link)=>{
+   link.addEventListener("click",(e)=>{
+    e.preventDefault();
+    document.querySelector(".active").classList.remove("active");
+    e.target.classList.add("active");
+})
+})
 
 
 
@@ -41,14 +49,14 @@ window.addEventListener("scroll", () => {
 
 // filter
 let gridEl = document.querySelector(".grid");
-console.log(gridEl);
+// console.log(gridEl);
 let filterItems = document.querySelector(".filter-items");
 let projects = document.querySelectorAll(".project");
-console.log(projects);
+// console.log(projects);
 let technologies = document.querySelectorAll(".technology");
-console.log(technologies.forEach(element => {
-    console.log(element.innerText);
-}));
+// console.log(technologies.forEach(element => {
+//     console.log(element.innerText);
+// }));
 
 
 
