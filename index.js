@@ -12,7 +12,7 @@ collapseButton.addEventListener("click",()=>{
 let navLinks=document.querySelectorAll(".nav-link");
 navLinks.forEach((link)=>{
    link.addEventListener("click",(e)=>{
-    e.preventDefault();
+   
     document.querySelector(".active").classList.remove("active");
     e.target.classList.add("active");
 })
@@ -66,8 +66,8 @@ filterItems.addEventListener("click", (e) => {
     // remove fade
     fadeEl.style.opacity = "0";
     // added active class
-    document.querySelector(".active").classList.remove("active");
-    e.target.classList.add("active");
+    document.querySelector(".active-work").classList.remove("active-work");
+    e.target.classList.add("active-work");
     // reorganize grid
     console.log(e.target.innerText);
     if (e.target.innerText === "ALL") {
