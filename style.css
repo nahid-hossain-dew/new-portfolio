@@ -52,6 +52,12 @@ a {
   text-transform: capitalize;
 }
 
+#header {
+  position: fixed;
+  width: 100%;
+  background-color: #cdc9c9;
+  z-index: 100;
+}
 #header .navbar {
   display: flex;
   justify-content: space-between;

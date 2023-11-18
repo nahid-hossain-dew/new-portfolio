@@ -10,6 +10,9 @@ collapseButton.addEventListener("click",()=>{
 
 // nav-link 
 let navLinks=document.querySelectorAll(".nav-link");
+let sectionEls=document.querySelectorAll(".section");
+
+// adding active class
 navLinks.forEach((link)=>{
    link.addEventListener("click",(e)=>{
    
@@ -17,7 +20,21 @@ navLinks.forEach((link)=>{
     e.target.classList.add("active");
 })
 })
-
+// adding active class on scroll
+let currentSection="home";
+window.addEventListener("scroll",()=>{
+    sectionEls.forEach((section)=>{
+       if(window.scrollY>=(section.offsetTop)-section.clientHeight/5){
+        currentSection=section.id;
+       }
+    })
+    navLinks.forEach((link)=>{
+      if(link.href.includes(currentSection)){
+        document.querySelector(".active").classList.remove("active");
+        link.classList.add("active");
+      }
+    })
+})
 
 
 
