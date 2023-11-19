@@ -22,6 +22,7 @@ body {
     // font-family: 'Poppins', sans-serif;
     font-family: 'Roboto', sans-serif;
     // font-family: 'VT323', monospace;
+    padding-top: 60px;
 }
 
 body::-webkit-scrollbar {
@@ -45,7 +46,7 @@ a{
 // utility classes starts
 .container {
     // min-width: 800px;
-    width: 60%;
+    width: 90%;
     margin: auto;
 }
 
@@ -53,7 +54,7 @@ a{
     display: inline-block;
     border: none;
     background-color: inherit;
-    text-transform: uppercase;
+    // text-transform: uppercase;
     font-weight: bold;
 
 }
@@ -73,6 +74,7 @@ a{
 // navbar section starts
 #header{
     position: fixed;
+    top: 0;
     width: 100%;
     background-color: #cdc9c9;
     z-index: 100;
@@ -85,6 +87,7 @@ a{
         padding: 1em 0;
         gap: 1rem;
         position: relative;
+        height: 60px;
        
         .nav-brand{
             font-size: 2rem;
@@ -107,7 +110,7 @@ a{
             
             .navbar-nav{
                 display: flex;
-                gap: 1rem;
+                gap: 2rem;
                 .nav-link{
                     text-transform: uppercase;
                     font-weight: bold;
@@ -124,8 +127,16 @@ a{
                  
                 // }
                 i{
-                    font-size: 1.6rem;
-                    color: black;
+                    font-size: 2rem;
+                 &.fa-facebook{
+                    color: #4267B2;
+                 }
+                 &.fa-twitter{
+                    color: #1DA1F2;
+                 }
+                 &.fa-instagram{
+                    color:  #833AB4;
+                 }
                     // margin: 0 1rem;
                 }
             }
@@ -141,19 +152,23 @@ a{
     align-items: center;
     justify-content: center;
     gap: 3rem;
-  
+    
     .details{
+        width: 400px;
         display: flex;
         flex-direction: column;
         gap: 1rem;
         align-items: center;
        
         h1{
-            font-size: 3rem;
+            font-size: 5rem;
             text-transform: uppercase;
         }
         h4{
             font-size: 2rem;
+        }
+        h3{
+            font-size: 1.6rem;
         }
         .skills{
             display: flex;
@@ -164,15 +179,19 @@ a{
                 animation: bouncing 2s linear infinite;
                 &:nth-child(1){
                     animation-duration: 2s;
+                    color: #e34c26;
                 }
                 &:nth-child(2){
                     animation-duration: 2.2s;
+                    color: #264de4;
                 }
                 &:nth-child(3){
                     animation-duration: 2.5s;
+                    color: #cc6699 ;
                 }
                 &:nth-child(4){
                     animation-duration: 2.7s;
+                    color: #F0DB4F;
                 }
             
                 @keyframes bouncing {
@@ -193,8 +212,10 @@ a{
         }
     }
     .img-container{
+      
         width: 400px;
         height: 400px;
+        justify-self: center;
         img{
             width: 100%;
             height: 100%;
@@ -203,12 +224,18 @@ a{
     
         }
     }
+    Button{
+        background-color: grey;
+        padding: .6em 1.6em;
+        border-radius: 5px;
+        color: #fff;
+    }
   
 }
 // hero section ends
 // about me section starts
 #about{
-    padding: 5rem;
+    padding: 6rem;
     // height: 100vh;
     h1{
         text-align: center;
@@ -222,7 +249,7 @@ a{
         display: grid;
         grid-template-columns: 1fr 1fr;
         align-items: center;
-        gap: 2rem;
+        gap: 1rem;
         height: 100%;
     }
     .img-container{
@@ -236,16 +263,18 @@ a{
         }
     }
     .about-details{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
+        // width: 100%;
+        // display: flex;
+        // flex-direction: column;
+        // gap: 1rem;
         align-self: center;
         h3{
            font-size: 1.8rem;
+           margin-bottom: 2rem;
         }
         p{
             font-size: 1.6rem;
+            line-height: 2.5rem;
         }
     }
 }
@@ -260,7 +289,7 @@ a{
 }
 
 .my-work {
-    padding: 5rem;
+    padding: 6rem;
 
     .filter {
         display: flex;
@@ -492,7 +521,18 @@ a{
                     font-size: 25px;
                     // color: $main-color;
                     margin: .8em 0em;
-                   
+                   &.fa-linkedin{
+                    color: #0A66C2;
+                   }
+                   &.fa-facebook{
+                    color: #4267B2;
+                 }
+                  &.fa-twitter{
+                    color: #1DA1F2;
+                 }
+                  &.fa-github{
+                    color: #2b3137;
+                 }
                     &:hover{
                         // color: $main-color;
                         transform: scale(1.5);
@@ -599,9 +639,20 @@ a{
              }
         }
     }
-  
+  #hero{
+    flex-direction: column;
+  }
         
-
+#about{
+    .about-me-container{
+        grid-template-columns: 1fr;
+    }
+}
+.my-work{
+    .grid{
+        grid-template-columns: 1fr;
+    }
+}
   
 }
 // media queries ends

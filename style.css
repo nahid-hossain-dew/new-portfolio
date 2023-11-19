@@ -13,6 +13,7 @@ html {
 body {
   scrollbar-width: none;
   font-family: "Roboto", sans-serif;
+  padding-top: 60px;
 }
 
 body::-webkit-scrollbar {
@@ -30,7 +31,7 @@ a {
 }
 
 .container {
-  width: 60%;
+  width: 90%;
   margin: auto;
 }
 
@@ -38,7 +39,6 @@ a {
   display: inline-block;
   border: none;
   background-color: inherit;
-  text-transform: uppercase;
   font-weight: bold;
 }
 
@@ -54,6 +54,7 @@ a {
 
 #header {
   position: fixed;
+  top: 0;
   width: 100%;
   background-color: #cdc9c9;
   z-index: 100;
@@ -65,6 +66,7 @@ a {
   padding: 1em 0;
   gap: 1rem;
   position: relative;
+  height: 60px;
 }
 #header .navbar .nav-brand {
   font-size: 2rem;
@@ -83,7 +85,7 @@ a {
 }
 #header .navbar .collapse .navbar-nav {
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
 }
 #header .navbar .collapse .navbar-nav .nav-link {
   text-transform: uppercase;
@@ -96,8 +98,16 @@ a {
   opacity: 1;
 }
 #header .navbar .collapse .navbar-nav i {
-  font-size: 1.6rem;
-  color: black;
+  font-size: 2rem;
+}
+#header .navbar .collapse .navbar-nav i.fa-facebook {
+  color: #4267B2;
+}
+#header .navbar .collapse .navbar-nav i.fa-twitter {
+  color: #1DA1F2;
+}
+#header .navbar .collapse .navbar-nav i.fa-instagram {
+  color: #833AB4;
 }
 
 #hero {
@@ -108,17 +118,21 @@ a {
   gap: 3rem;
 }
 #hero .details {
+  width: 400px;
   display: flex;
   flex-direction: column;
   gap: 1rem;
   align-items: center;
 }
 #hero .details h1 {
-  font-size: 3rem;
+  font-size: 5rem;
   text-transform: uppercase;
 }
 #hero .details h4 {
   font-size: 2rem;
+}
+#hero .details h3 {
+  font-size: 1.6rem;
 }
 #hero .details .skills {
   display: flex;
@@ -131,15 +145,19 @@ a {
 }
 #hero .details .skills i:nth-child(1) {
   animation-duration: 2s;
+  color: #e34c26;
 }
 #hero .details .skills i:nth-child(2) {
   animation-duration: 2.2s;
+  color: #264de4;
 }
 #hero .details .skills i:nth-child(3) {
   animation-duration: 2.5s;
+  color: #cc6699;
 }
 #hero .details .skills i:nth-child(4) {
   animation-duration: 2.7s;
+  color: #F0DB4F;
 }
 @keyframes bouncing {
   0% {
@@ -155,6 +173,7 @@ a {
 #hero .img-container {
   width: 400px;
   height: 400px;
+  justify-self: center;
 }
 #hero .img-container img {
   width: 100%;
@@ -163,9 +182,15 @@ a {
      object-fit: cover;
   border-radius: 50%;
 }
+#hero Button {
+  background-color: grey;
+  padding: 0.6em 1.6em;
+  border-radius: 5px;
+  color: #fff;
+}
 
 #about {
-  padding: 5rem;
+  padding: 6rem;
 }
 #about h1 {
   text-align: center;
@@ -178,7 +203,7 @@ a {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
   height: 100%;
 }
 #about .img-container {
@@ -193,21 +218,19 @@ a {
      object-fit: cover;
 }
 #about .about-details {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
   align-self: center;
 }
 #about .about-details h3 {
   font-size: 1.8rem;
+  margin-bottom: 2rem;
 }
 #about .about-details p {
   font-size: 1.6rem;
+  line-height: 2.5rem;
 }
 
 .my-work {
-  padding: 5rem;
+  padding: 6rem;
 }
 .my-work .filter {
   display: flex;
@@ -388,6 +411,18 @@ a {
   font-size: 25px;
   margin: 0.8em 0em;
 }
+#contact .contact-container .contacts-info .contact-media i.fa-linkedin {
+  color: #0A66C2;
+}
+#contact .contact-container .contacts-info .contact-media i.fa-facebook {
+  color: #4267B2;
+}
+#contact .contact-container .contacts-info .contact-media i.fa-twitter {
+  color: #1DA1F2;
+}
+#contact .contact-container .contacts-info .contact-media i.fa-github {
+  color: #2b3137;
+}
 #contact .contact-container .contacts-info .contact-media i:hover {
   transform: scale(1.5);
   cursor: pointer;
@@ -470,5 +505,14 @@ a {
   }
   #header .navbar .showmenu {
     height: 160px;
+  }
+  #hero {
+    flex-direction: column;
+  }
+  #about .about-me-container {
+    grid-template-columns: 1fr;
+  }
+  .my-work .grid {
+    grid-template-columns: 1fr;
   }
 }/*# sourceMappingURL=style.css.map */
