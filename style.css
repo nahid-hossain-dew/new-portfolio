@@ -198,6 +198,8 @@ a {
   text-transform: uppercase;
   font-size: 2rem;
   letter-spacing: 0.1rem;
+  border-bottom: 1px solid black;
+  padding: 1rem;
 }
 #about .about-me-container {
   display: grid;
@@ -244,6 +246,7 @@ a {
   color: black;
   letter-spacing: 0.1rem;
   text-transform: uppercase;
+  border-bottom: 1px solid black;
 }
 .my-work .filter .filter-items {
   display: flex;
@@ -377,6 +380,7 @@ a {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   font-size: 2rem;
+  border-bottom: 1px solid black;
 }
 #contact .contact-container {
   display: grid;
@@ -384,7 +388,7 @@ a {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  height: 100vh;
+  height: 90vh;
   padding: 0.2em;
   font-size: 20px;
 }
