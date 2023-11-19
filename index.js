@@ -1,8 +1,9 @@
 // navbar section 
 let collapseButton=document.querySelector(".collapse-button");
 let collapseMenu=document.querySelectorAll(".navbar .collapse")
-// console.log(collapseMenu);
+console.log(collapseButton);
 collapseButton.addEventListener("click",()=>{
+    console.log("clicked")
     collapseMenu.forEach((menu)=>{
       menu.classList.toggle("showmenu");
     })
@@ -24,7 +25,7 @@ navLinks.forEach((link)=>{
 let currentSection="home";
 window.addEventListener("scroll",()=>{
     sectionEls.forEach((section)=>{
-       if(window.scrollY>=(section.offsetTop)-section.clientHeight/2){
+       if(window.scrollY>=(section.offsetTop)-section.clientHeight/4){
         currentSection=section.id;
        }
     })
@@ -37,7 +38,20 @@ window.addEventListener("scroll",()=>{
 })
 
 // type writer effect on name
+let title=document.querySelector(".title");
 
+let myName= "nahid hossain";
+let index=1;
+
+let typeWriter=()=>{
+    let newTitle=myName.slice(0,index);
+    title.innerText = newTitle;
+    index > myName.length ? index = 1 : index++ ;
+
+    setTimeout(()=>typeWriter(),600);
+   
+}
+typeWriter();
 
 
 // fade
@@ -109,17 +123,3 @@ filterItems.addEventListener("click", (e) => {
     }
 
 })
-let title=document.querySelector(".title");
-console.log(title);
-let myName= "nahid hossain";
-let index=1;
-
-let typeWriter=()=>{
-    let newTitle=myName.slice(0,index);
-    title.innerText = newTitle;
-    index > myName.length ? index = 1 : index++ ;
-
-    setTimeout(()=>typeWriter(),600);
-   
-}
-typeWriter();

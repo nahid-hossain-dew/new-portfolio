@@ -66,7 +66,6 @@ a {
   padding: 1em 0;
   gap: 1rem;
   position: relative;
-  height: 60px;
 }
 #header .navbar .nav-brand {
   font-size: 2rem;
@@ -203,8 +202,10 @@ a {
 }
 #about .about-me-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   align-items: center;
+  justify-content: center;
+  padding: 3rem;
   gap: 1rem;
   height: 100%;
 }
@@ -502,6 +503,7 @@ a {
     height: 0;
     overflow: hidden;
     transition: height 0.5s ease-in;
+    z-index: 200;
   }
   #header .navbar .collapse .navbar-nav {
     flex-direction: column;
